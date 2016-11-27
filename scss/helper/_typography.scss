@@ -1,0 +1,37 @@
+// font: style weight size/line-height
+
+// Variables
+$lighter: 300;
+$regular: 400;
+$medium: 500;
+
+// Functions
+@mixin format($font-stack, $color-type, $dark-percent, $white-percent) {
+  font: normal normal $font-stack roboto !important;
+  @if $color-type == dark {
+    color: rgba(0,0,0, $dark-percent);
+  }
+  @if $color-type == light {
+    color: rgba(255,255,255, $white-percent);
+  }
+}
+@mixin type($color-type) {
+  ._#{$color-type} {
+    &-display4 { @include format(#{$lighter} 112px/48p, $color-type, .54, .7); }
+    &-display3 { @include format(#{$regular} 56px/48px, $color-type, .54, .7); }
+    &-display2 { @include format(#{$regular} 45px/48px, $color-type, .54, .7); }
+    &-display1 { @include format(#{$regular} 34px/40px, $color-type, .54, .7); }
+    &-heading  { @include format(#{$regular} 24px/42px, $color-type, .87, 1);  }
+    &-title    { @include format(#{$medium}  20px/36px, $color-type, .87, 1);  }
+    &-subheading {@include format(#{$regular} 15px/24px, $color-type, .87, 1); }
+    &-body2    { @include format(#{$medium}  13px/24px, $color-type, .87, 1);  }
+    &-body1    { @include format(#{$regular} 13px/20px, $color-type, .87, 1);  }
+    &-caption  { @include format(#{$regular} 12px/20px, $color-type, .54, .7); }
+    &-button   { @include format(#{$regular} 14px/20px, $color-type, .87, 1);  }
+  }
+}
+@include type(dark);
+@include type(light);
+._dark-button, ._white-button { text-transform: uppercase; }
+
+// Icons Rule

@@ -1,0 +1,64 @@
+{
+  "trip" : {
+    "trip_id" : {
+      "city" : "[string] City",
+      "cost" : "[num] Cost",
+      "created" : "[timestamp] Creation Date",
+      "currency" : "[string] Currency",
+      "image" : "[string] URL to Main Image",
+      "milestone" : {
+        "milestone_id" : {
+          "content" : "[string] Content",
+          "image" : {
+            "image_id" : {
+              "caption" : "[string] Image caption",
+              "url" : "[string] URL to image"
+            }
+          },
+          "layout" : "[num] Layout Number",
+          "place" : {
+            "location" : {
+              "lat" : "[num] Latitude",
+              "lng" : "[num] Longitude"
+            },
+            "name" : "[string] Place name",
+            "place_id" : "[string] Place ID"
+          },
+          "time" : "[timestamp] Time Added",
+          "tip" : "[string] Tip"
+        }
+      },
+      "start_date" : "[timestamp] Started Date",
+      "title" : "[string] Title of Trip",
+      "user_id" : {
+        "avatar" : "[string] URL to Avatar",
+        "name" : "[string] Username"
+      }
+    }
+  },
+  "user" : {
+    "user_id" : {
+      "avatar" : "[string] URL to Avatar",
+      "created" : "[timestamp] Creation Time",
+      "email" : "[string] Email",
+      "first_name" : "[string] First Name",
+      "last_name" : "[string] Last Name",
+      "password" : "[string] Password"
+    }
+  },
+  "user_trip" : {
+    "user_id" : {
+      "trip_id" : {
+        "city" : "[string] City",
+        "cost" : "[num] Cost",
+        "created" : "[timestamp] Creation Date",
+        "currency" : "[string] Currency",
+        "image" : "[string] URL to Main Image",
+        "start_date" : "[timestamp] Started Date",
+        "summary" : "[string] Summary of Trip",
+        "title" : "[string] Trip Title",
+        "updated" : "[timestamp] Updated date"
+      }
+    }
+  }
+}
